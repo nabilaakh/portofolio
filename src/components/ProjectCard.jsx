@@ -114,6 +114,8 @@ export const ProjectVisual = ({ project, darkMode }) => {
         <img
           src={primaryImage}
           alt={project.title}
+          loading="lazy"
+          decoding="async"
           onError={() => setImgError(true)}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
         />

@@ -64,6 +64,8 @@ export default function ProjectModal({ project, darkMode, onClose }) {
                 <img
                   src={galleryImages[activeImageIndex]}
                   alt={`${project.title} screenshot ${activeImageIndex + 1}`}
+                  loading="lazy"
+                  decoding="async"
                   className={`w-full h-full object-contain transition-opacity duration-300 ${
                     darkMode ? 'bg-slate-900/50' : 'bg-slate-100'
                   }`}
@@ -128,7 +130,13 @@ export default function ProjectModal({ project, darkMode, onClose }) {
                         : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img
+                      src={img}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
+                    />
                   </button>
                 ))}
               </div>
@@ -139,6 +147,8 @@ export default function ProjectModal({ project, darkMode, onClose }) {
               <img
                 src={galleryImages[0]}
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className={`w-full h-full object-contain ${
                   darkMode ? 'bg-slate-900/50' : 'bg-slate-100'
                 }`}
